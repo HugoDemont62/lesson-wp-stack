@@ -13,12 +13,16 @@ Version: 1.0.0
 */
 
 require_once 'inc/PostType.php';
+require_once 'inc/Hooks.php';
+require_once 'inc/Metaboxes.php';
 
 class Portfolio
 {
     public function init()
     {
-        (new \Portfolio\PostType())->register();       
+        (new \Portfolio\PostType())->register();
+        (new \Portfolio\Hooks())->register();
+        (new \Portfolio\Metaboxes())->register();
     }
 }
 

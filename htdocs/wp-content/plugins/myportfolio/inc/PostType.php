@@ -9,7 +9,9 @@ namespace Portfolio;
 
 class PostType
 {
-    public function register()
+    public const SLUG = 'portfolio';
+
+    public function register(): void
     {
         add_action('init', function () {
             $labels = array(
@@ -55,11 +57,11 @@ class PostType
                 'hierarchical' => false,
                 'public'       => true,
                 'has_archive'  => true,
-                'rewrite'      => array('slug' => 'portfolio'),
+                'rewrite'      => array('slug' => self::SLUG),
 
             );
 
-            register_post_type('portfolio', $args);
+            register_post_type(self::SLUG, $args);
         });
     }
 }
