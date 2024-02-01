@@ -13,3 +13,6 @@ export DOCKER_WWW_DATA_UID=$(id -u)
 docker-compose -p wordpress -f .docker/src/docker-compose.yml --env-file .env up
 
 You can add -d to run task in background
+
+### Connect to container
+docker-compose -p wordpress -f .docker/src/docker-compose.yml --env-file .env exec  app /bin/bash

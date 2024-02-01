@@ -29,7 +29,7 @@ services:
     extra_hosts:
       - "docker.host.ip:host-gateway"
     ports:
-      - "8081:80"
+      - "80:80"
     networks:
       - default
     volumes:
