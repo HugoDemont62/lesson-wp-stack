@@ -1,6 +1,6 @@
 /*
 Theme Name: Portfolio Theme
-Template: twentytwentyfour
+Template: twentytwentyone
 Theme URI: https://amphibee.fr/
 Author: Loïc HALL
 Requires at least: 6.4
@@ -13,6 +13,28 @@ Text Domain: twentytwentyfour
 Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
 */
 
+:root {
+    --global--font-size-page-title: 1.4rem !important;
+}
 .container {
     width: 1280px;
 }
+.post-type-archive-portfolio .site-main {
+    max-width: 1280px;
+}
+
+.post-type-archive-portfolio article {
+    max-width: 25%;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Add a 20px gap between elements */
+}
+
+/* Apply the grid class to elements to create a 4-column layout */
+.grid-4 {
+    flex: 0 0 calc(25% - 20px); /* Each element takes up 25% of the container width to create 4 columns */
+}
+
