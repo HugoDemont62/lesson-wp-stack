@@ -16,6 +16,7 @@ require_once 'inc/PostType.php';
 require_once 'inc/Hooks.php';
 require_once 'inc/Metaboxes.php';
 require_once 'inc/Taxonomies.php';
+require_once 'inc/ACF.php';
 
 class Portfolio
 {
@@ -25,6 +26,7 @@ class Portfolio
         (new \Portfolio\Hooks())->register();
         (new \Portfolio\Metaboxes())->register();
         (new \Portfolio\Taxonomies())->register();
+        (new \Portfolio\ACF())->register();
     }
 }
 
