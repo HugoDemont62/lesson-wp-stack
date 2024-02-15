@@ -26,7 +26,7 @@ class ACF
 
         $field_group->add_rule_group( $rule_group );
         
-        $text_field = new Text("Type de projet");
+        $text_field = new Text("Type de projet", 'type-projet');
         $field_group->add_field($text_field);
     }
 }

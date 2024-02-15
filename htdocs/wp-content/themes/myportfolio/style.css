@@ -16,15 +16,13 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 :root {
     --global--font-size-page-title: 1.4rem !important;
 }
-.container {
-    width: 1280px;
-}
-.post-type-archive-portfolio .site-main {
+
+.site-main {
     max-width: 1280px;
 }
 
-.post-type-archive-portfolio article {
-    max-width: 25%;
+ article {
+    max-width: 25% !important;
 }
 
 .grid {

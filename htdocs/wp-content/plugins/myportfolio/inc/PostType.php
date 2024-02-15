@@ -58,7 +58,7 @@ class PostType
                 'public'       => true,
                 'has_archive'  => true,
                 'rewrite'      => array('slug' => self::SLUG),
-
+                'show_in_nav_menus' => true
             );
 
             register_post_type(self::SLUG, $args);
