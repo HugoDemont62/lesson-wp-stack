@@ -17,16 +17,22 @@ require_once 'inc/Hooks.php';
 require_once 'inc/Metaboxes.php';
 require_once 'inc/Taxonomies.php';
 require_once 'inc/ACF.php';
+require_once 'inc/Filters.php';
 
 class Portfolio
 {
-    public function init()
+    public function init(): void
     {
         (new \Portfolio\PostType())->register();
+        (new \Portfolio\Filters())->register();
         (new \Portfolio\Hooks())->register();
         (new \Portfolio\Metaboxes())->register();
         (new \Portfolio\Taxonomies())->register();
-        (new \Portfolio\ACF())->register();
+        try {
+            (new \Portfolio\ACF())->register();
+        } catch (\Geniem\ACF\Exception $e) {
+            error_log($e->getMessage());
+        }
     }
 }
 

@@ -15,14 +15,31 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 
 :root {
     --global--font-size-page-title: 1.4rem !important;
+    --grid-gap: 20px;
 }
 
 .site-main {
     max-width: 1280px;
 }
 
- article {
-    max-width: 25% !important;
+ body:not(.singular) article {
+    max-width: calc(50% - var(--grid-gap)) !important;
+}
+
+.flex {
+    display: flex;    
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .grid {
@@ -31,8 +48,12 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
     gap: 20px; /* Add a 20px gap between elements */
 }
 
-/* Apply the grid class to elements to create a 4-column layout */
+
+.grid-2 {
+    flex: 0 0 calc(50% - var(--grid-gap)); /* Each element takes up 25% of the container width to create 4 columns */
+}
+
 .grid-4 {
-    flex: 0 0 calc(25% - 20px); /* Each element takes up 25% of the container width to create 4 columns */
+    flex: 0 0 calc(25% - var(--grid-gap)); /* Each element takes up 25% of the container width to create 4 columns */
 }
 
